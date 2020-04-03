@@ -4,10 +4,13 @@
   box-sizing: border-box;
   border-radius: 2px;
   background-clip: padding-box;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #b2d0ff, #95afe6);
+  box-shadow: 7px 7px 14px #8fa7db, -7px -7px 14px #bdddff;
+  border: 0px;
 }
 
 .card .card-image span.card-title {
-  color: #fff;
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
@@ -37,8 +40,6 @@
   border-radius: 0 0 2px 2px;
   background-clip: padding-box;
   box-sizing: border-box;
-  background: #fff;
-  color: #333;
 }
 
 .card .card-content p {
@@ -48,18 +49,4 @@
 .card .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px;
-  background: #fff;
 }
-
-.card .card-action a {
-  color: #ffab40;
-  margin-right: 16px;
-  transition: color 0.3s ease;
-  text-transform: uppercase;
-}
-
-.card .card-action a:hover {
-  color: #ffd8a6;
-  text-decoration: none;
-}
-
