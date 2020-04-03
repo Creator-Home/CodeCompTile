@@ -13,7 +13,6 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
     />
     <link rel="stylesheet" href="assets/css/YoutubeSans.css" />
-    <link rel="stylesheet" href="assets/css/Bootstrap-Gradient.css" />
     <link rel="stylesheet" href="assets/css/Material-Card.css" />
     <link rel="stylesheet" href="assets/css/Projects-Horizontal.css" />
     <link rel="stylesheet" href="assets/css/Styled-Header.css" />
@@ -23,7 +22,7 @@
   <body
     class="justify-content-center align-items-center align-content-center align-self-center"
   >
-    <div style="background-color: #d0e6ff;padding-bottom: 29px;">
+    <div style="background-color: #d0e6ff; padding-bottom: 29px;">
       <div class="container">
         <div class="row" style="padding-top: 22px;">
           <div class="col-md-11 offset-4 offset-sm-4 offset-md-5">
@@ -42,7 +41,7 @@
             </h1>
             <h1
               class="text-left"
-              style="font-family: Montserrat, sans-serif;font-size: 24px;"
+              style="font-family: Montserrat, sans-serif; font-size: 24px;"
             >
               <strong>Company Name</strong>
             </h1>
@@ -53,8 +52,8 @@
           >
             <div class="card" style="border-radius: 10px;">
               <div class="card-content" style="border-radius: 10px;">
+                <h4>Team name</h4>
                 <p><strong>Your submission</strong></p>
-                <h1>Team name</h1>
                 <p><strong>Submission details</strong></p>
               </div>
             </div>
@@ -65,7 +64,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <p style="font-family: Montserrat, sans-serif;font-size: 19.5px;">
+            <p style="font-family: Montserrat, sans-serif; font-size: 19.5px;">
               <strong>Problem Statement</strong>
             </p>
             <p>
@@ -77,11 +76,11 @@
               ultricies.<br />
             </p>
 
-            <p style="font-family: Montserrat, sans-serif;font-size: 19.5px;">
+            <p style="font-family: Montserrat, sans-serif; font-size: 19.5px;">
               <strong>Function Description</strong><br />
             </p>
             <p><em>Char nonRepeated(char * str)</em><br /></p>
-            <p style="font-family: Montserrat, sans-serif;font-size: 19.5px;">
+            <p style="font-family: Montserrat, sans-serif; font-size: 19.5px;">
               <strong>Input Format</strong><br />
             </p>
             <p>
@@ -98,14 +97,20 @@
           <div></div>
           <div class="col-lg-3" style="margin: 10px;">
             <button
+              id="custom-btn"
               class="btn btn-outline-primary text-uppercase text-center d-inline-flex d-lg-flex flex-grow-1 flex-shrink-1 justify-content-between justify-content-lg-end align-items-lg-end"
               data-toggle="tooltip"
               data-bs-tooltip=""
               type="button"
-              style="filter: blur(0px);font-family: Montserrat, sans-serif;font-weight: bold;font-style: normal;"
+              style="
+                filter: blur(0px);
+                font-family: Montserrat, sans-serif;
+                font-weight: bold;
+                font-style: normal;
+              "
               title="Upload your file here"
             >
-              upload Task
+              <input type="file" id="real-file" hidden="hidden" /> upload Task
             </button>
           </div>
           <div class="col-lg-3 offset-lg-5" style="padding: 0px;">
@@ -114,7 +119,12 @@
               data-toggle="tooltip"
               data-bs-tooltip=""
               type="button"
-              style="filter: blur(0px);font-family: Montserrat, sans-serif;font-weight: bold;font-style: normal;"
+              style="
+                filter: blur(0px);
+                font-family: Montserrat, sans-serif;
+                font-weight: bold;
+                font-style: normal;
+              "
               title="download your file here"
             >
               download Task
@@ -132,5 +142,14 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script>
+      const realUploadBtn = document.getElementById("real-file");
+      const customUploadBtn = document.getElementById("custom-btn");
+
+      customUploadBtn.addEventListener("click", function () {
+        realUploadBtn.click();
+      });
+      // const realUploadBtn = document.getElementById("")
+    </script>
   </body>
 </html>
