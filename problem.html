@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="mainProblem">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -8,6 +8,7 @@
     />
     <title>Comp</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat"
@@ -17,6 +18,10 @@
     <link rel="stylesheet" href="assets/css/Projects-Horizontal.css" />
     <link rel="stylesheet" href="assets/css/Styled-Header.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"
+    ></script>
   </head>
 
   <body
@@ -25,12 +30,17 @@
     <div style="background-color: #a6c2ff; padding-bottom: 29px;">
       <div class="container">
         <div class="row" style="padding-top: 22px;">
-          <div class="col-md-11 offset-4 offset-sm-4 offset-md-5">
+          <div class="col-md-3 offset-md-5 offset-xs-4">
             <img
               class="img-fluid imageSpin"
-              src="assets/img/CREATOR_LOGO.png"
+              src="./assets/img/CREATOR_LOGO.png"
               loading="lazy"
             />
+          </div>
+          <div class="col-md-2">
+            <strong>Time left:
+              <button class="btn btn-outline-dark" id="timer"></buttton
+            ></strong>
           </div>
           <div class="col">
             <h1
@@ -50,7 +60,7 @@
             class="col-10 col-sm-6 col-md-6 col-lg-4 col-xl-4"
             style="border-radius: 10px; margin-bottom: 20px;"
           >
-            <div class="card" style="border-radius: 10px;">
+            <div class="card hideDiv" style="border-radius: 10px;">
               <div class="card-content" style="border-radius: 10px;">
                 <h4>Team name</h4>
                 <p><strong>Your submission</strong></p>
@@ -111,12 +121,13 @@
               "
               title="Upload your file here"
             >
-              <input type="file" id="real-file" hidden="hidden" /> upload Task
+              <input type="file" id="real-file" hidden="hidden" /> upload Solution
             </button>
           </div>
           <div class="col-lg-3 offset-lg-5" style="padding: 0px;">
             <button
-              class="btn btn-outline-dark text-uppercase text-center d-inline-flex d-lg-flex flex-grow-1 flex-shrink-1 justify-content-between justify-content-lg-end align-items-lg-end"
+              id="downloadBtn"
+              class="btn btn-outline-dark text-uppercase text-center d-inline-flex d-lg-flex justify-content-between justify-content-lg-end align-items-lg-end"
               data-toggle="tooltip"
               data-bs-tooltip=""
               type="button"
@@ -131,26 +142,74 @@
               download Task
             </button>
           </div>
-          <div class="clearfix"></div>
-          <div class="clearfix"></div>
-          <div class="clearfix"></div>
-          <div class="clearfix"></div>
-          <div class="clearfix"></div>
-          <div class="clearfix"></div>
         </div>
       </div>
     </div>
+    <div hidden="hidden" id="editor">wow so empty</div>
+    <div hidden="hidden">wow so empty</div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script>
       const realUploadBtn = document.getElementById("real-file");
       const customUploadBtn = document.getElementById("custom-btn");
+      const downloadBtn = document.getElementById("downloadBtn");
+      // var doc = new jsPDF();
+      const doc = document.getElementById("mainProblem");
 
       customUploadBtn.addEventListener("click", function () {
         realUploadBtn.click();
       });
+
+      downloadBtn.addEventListener("click", function () {
+        print(doc);
+      });
+
+      // var specialElementHandlers = {
+      //   "#editor": function (element, renderer) {
+      //     return true;
+      //   },
+      // };
+
+      // $("#downloadBtn").click(function () {
+      //   doc.fromHTML($("#mainProblem").html(), 15, 15, {
+      //     width: 170,
+      //     elementHandlers: specialElementHandlers,
+      //   });
+      //   doc.save("sample-file.pdf");
+      // });
       // const realUploadBtn = document.getElementById("")
+    </script>
+    <script>
+      var uploadBtn = document.querySelector("#custom-btn");
+      var uploadRealBtn = document.querySelector("#real-file");
+      
+      var timerTime = "April 5, 2020 01:53:40";
+      var countDownDate = new Date(timerTime).getTime();
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          uploadBtn.classList.toggle("disabled");
+          uploadBtn.classList.toggle("disabledBtn");
+          uploadBtn.innerHTML = "time up";
+          document.getElementById("timer").innerHTML = "Ended";
+        }
+      }, 1000);
     </script>
   </body>
 </html>

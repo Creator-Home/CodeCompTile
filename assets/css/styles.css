@@ -60,3 +60,6 @@ p {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 3s;
 }
+.disabledBtn {
+  display: none !important;
+}
