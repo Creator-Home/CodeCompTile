@@ -11,16 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+  </script>
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/css/Navbar---Apple-1.css" />
-    <link rel="stylesheet" href="assets/css/Navbar---Apple.css" />
     <link rel="stylesheet" href="assets/css/Navbar-Apple.css" />
-    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-
-    
-    <link rel="stylesheet" href="assets/css/YoutubeSans.css" />
     <link rel="stylesheet" href="assets/css/Material-Card.css" />
     <link rel="stylesheet" href="assets/css/Projects-Horizontal.css" />
     <link rel="stylesheet" href="assets/css/Styled-Header.css" />
@@ -31,11 +27,9 @@
     ></script>
   </head>
 
-  <body
-    style="font-family: 'Spartan', sans-serif; font-weight: 400;"
-    >
+  <body    >
     <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark p-0">
-      <div class="container">
+      <div class="container" id="nav-cont">
         <button
           data-toggle="collapse"
           class="navbar-toggler"
@@ -45,11 +39,13 @@
           ><span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navcol-1">
-          <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+          <ul class="nav navbar-nav flex-grow-1 justify-content-between" id="ul-nav">
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#"
-                ><img style="max-width: 30px;" src="./assets/img/CREATOR_LOGO_black.png"
-              /></a>
+              <a class="nav-link" href="#">
+                <img
+                  style="max-width: 30px;"
+                  src="./assets/img/CREATOR_LOGO_black.png" />
+            </a>
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" href="#">Creator</a>
@@ -61,10 +57,10 @@
               <a class="nav-link" href="#">Welcome <span>User</span></a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Discussion Center</a>
+              <a class="nav-link" href="#"><i class="fa fa-sticky-note-o"></i> Discussion Center</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Invite Your Friend</a>
+              <a class="nav-link" href="#"><i class="fa fa-group"></i> Invite Your Friend</a>
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" href="#">
@@ -77,11 +73,11 @@
               >
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Edit Profile</a>
-            </li>
+              <a class="nav-link" href="#"><i class="fa fa-gear"></i> Edit Profile</a>
+            </li> 
 
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Change Password</a>
+              <a class="nav-link" href="#"><i class="fa fa-key"></i> Change Password</a>
             </li>
 
             <li class="nav-item" role="presentation">
@@ -93,10 +89,11 @@
         </div>
       </div>
     </nav>
-    <hr style="padding: 1%; color: #a6c2ff;background-color: #a6c2ff;">
+    <hr>
+
     <div
     class="justify-content-center align-items-center align-content-center align-self-center"
-     style="background-color: #a6c2ff; padding-bottom: 29px;">
+     style="font-family: 'Spartan'; background-color: #a6c2ff; padding-bottom: 29px;">
       <div class="container">
         <div class="row" style="padding-top: 22px;">
           <div class="col-xs-10 col-sm-10 col-md-3 offset-xs-4 offset-sm-4 offset-md-5 offset-xs-4">
@@ -177,9 +174,9 @@
           <div></div>
           <div class="col-lg-3" style="margin: 10px;">
             <button
-              id="custom-btn"
+              
               class="btn btn-outline-dark text-uppercase text-center d-inline-flex d-lg-flex flex-grow-1 flex-shrink-1 justify-content-between justify-content-lg-end align-items-lg-end"
-              data-toggle="tooltip"
+              data-toggle="modal" data-target="#exampleModalCenter"
               data-bs-tooltip=""
               type="button"
               style="
@@ -189,7 +186,7 @@
               "
               title="Upload your file here"
             >
-              <input type="file" id="real-file" hidden="hidden" /> upload Solution
+              <input type="file" id="real-file" hidden="hidden"  /> upload Solution
             </button>
           </div>
           <div class="col-lg-3 offset-lg-5" style="padding: 0px;">
@@ -211,6 +208,45 @@
         </div>
       </div>
     </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Upload Task File</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>File size must be less than 500MB</h5>
+        <p id="output"></p>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-primary">Upload</button> -->
+        <button
+              id="custom-btn"
+              class="btn btn-outline-dark text-uppercase text-center"
+              data-toggle="modal" data-target="#exampleModalCenter"
+              data-bs-tooltip=""
+              type="button"
+              style="
+                filter: blur(0px);
+                font-weight: bold;
+                font-style: normal;
+              "
+              title="Upload your file here"
+            >
+              <input type="file" id="real-file" hidden="hidden"  /> Select File
+            </button>
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal"><strong>UPLOAD</strong></button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <div hidden="hidden" id="editor">wow so empty</div>
     <div hidden="hidden">wow so empty</div>
     <script src="assets/js/jquery.min.js"></script>
@@ -250,7 +286,7 @@
       var uploadBtn = document.querySelector("#custom-btn");
       var uploadRealBtn = document.querySelector("#real-file");
       
-      var timerTime = "April 6, 2020 13:53:40";
+      var timerTime = "April 6, 2020 17:45:40";
       var countDownDate = new Date(timerTime).getTime();
 
       var x = setInterval(function () {
@@ -276,6 +312,20 @@
           document.getElementById("timer").innerHTML = "Ended";
         }
       }, 1000);
+      
+        $('#real-file').on('change', function() { 
+  
+            const size =  
+               (this.files[0].size / 1024 / 1024).toFixed(2); 
+  
+            if (size > 499) { 
+                alert("File must be less than 500 MB"); 
+            } else { 
+                $("#output").html('<b>' + 
+                   'This file size is: ' + size + " MB" + '</b>'); 
+            } 
+        }); 
+    
     </script>
   </body>
 </html>

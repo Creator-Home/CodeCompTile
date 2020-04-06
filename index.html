@@ -11,15 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script 
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/css/Navbar---Apple-1.css" />
-    <link rel="stylesheet" href="assets/css/Navbar---Apple.css" />
+    <!-- <link rel="stylesheet" href="assets/css/Navbar---Apple-1.css" />
+    <link rel="stylesheet" href="assets/css/Navbar---Apple.css" /> -->
     <link rel="stylesheet" href="assets/css/Navbar-Apple.css" />
-    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="assets/css/YoutubeSans.css" />
     <link rel="stylesheet" href="assets/css/Material-Card.css" />
     <link rel="stylesheet" href="assets/css/Projects-Horizontal.css" />
     <link rel="stylesheet" href="assets/css/Styled-Header.css" />
@@ -31,8 +32,9 @@
   </head>
 
   <body style="max-width: device-width;">
+   
     <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark p-0">
-      <div class="container">
+      <div class="container" id="nav-cont">
         <button
           data-toggle="collapse"
           class="navbar-toggler"
@@ -42,13 +44,13 @@
           ><span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navcol-1">
-          <ul class="nav navbar-nav flex-grow-1 justify-content-between">
+          <ul class="nav navbar-nav flex-grow-1 justify-content-between" id="ul-nav">
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#"
-                ><img
+              <a class="nav-link" href="#">
+                <img
                   style="max-width: 30px;"
-                  src="./assets/img/CREATOR_LOGO_black.png"
-              /></a>
+                  src="./assets/img/CREATOR_LOGO_black.png" />
+            </a>
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" href="#">Creator</a>
@@ -60,10 +62,10 @@
               <a class="nav-link" href="#">Welcome <span>User</span></a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Discussion Center</a>
+              <a class="nav-link" href="#"><i class="fa fa-sticky-note-o"></i> Discussion Center</a>
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Invite Your Friend</a>
+              <a class="nav-link" href="#"><i class="fa fa-group"></i> Invite Your Friend</a>
             </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link" href="#">
@@ -76,11 +78,11 @@
               >
             </li>
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Edit Profile</a>
-            </li>
+              <a class="nav-link" href="#"><i class="fa fa-gear"></i> Edit Profile</a>
+            </li> 
 
             <li class="nav-item" role="presentation">
-              <a class="nav-link" href="#">Change Password</a>
+              <a class="nav-link" href="#"><i class="fa fa-key"></i> Change Password</a>
             </li>
 
             <li class="nav-item" role="presentation">
@@ -109,6 +111,10 @@
               loading="lazy"
             />
           </div>
+          <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 col-xl-2 offset-sm-2 offset-xs-4 offset-md-1 offset-xl-0">
+            <input class="form-control" id="anythingSearch" type="text" placeholder="Search Problem Statements">
+
+          </div>
         </div>
         <div class="col-lg-10 offset-lg-1 offset-xl-1">
           <h2 class="text-center">Problem Statements</h2>
@@ -122,7 +128,7 @@
           style="font-family: Montserrat, sans-serif;"
         >
           <!-- create multiple instances from below div -->
-          <div class="col-sm-12 item">
+          <div id="myDIV" class="col-sm-12 item">
             <div class="row" style="margin-right: 40px;">
               <a
                 href="./Problem.html"
@@ -140,51 +146,20 @@
                   "
                 >
                   <h3 class="name" style="font-size: 22px;">
-                    6Problem statement title
-                  </h3>
-                  <h3 class="name">
-                    Company name | <span>15</span> submissions
-                  </h3>
-                  <p class="description">
-                    Aenean tortor est, vulputate quis leo in, vehicula rhoncus
-                    lacus. Praesent aliquam in tellus eu gravida.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-12 item">
-            <div class="row" style="margin-right: 40px;">
-              <a
-                href="./Problem.html"
-                style="text-decoration: none; color: #122121;"
-              >
-                <div
-                  class="col card card-content"
-                  data-toggle="tooltip"
-                  data-bs-tooltip=""
-                  title="Click to open Problem Statement"
-                  style="
-                    background-color: #e7e6ff;
-                    margin-left: 43px;
-                    padding: 15px;
-                  "
-                >
-                  <h3 class="name" style="font-size: 22px;">
-                    Problem statement title
+                    Problem statement 1
                   </h3>
                   <h3 class="name">
                     Company name | <span>17</span> submissions
                   </h3>
                   <p class="description">
-                    3Aenean tortor est, vulputate quis leo in, vehicula rhoncus
+                    Aenean tortor est, vulputate quis leo in, vehicula rhoncus
                     lacus. Praesent aliquam in tellus eu gravida.
                   </p>
                 </div>
               </a>
             </div>
           </div>
-          <div class="col-sm-12 item">
+          <div id="myDIV" class="col-sm-12 item">
             <div class="row" style="margin-right: 40px;">
               <a
                 href="./Problem.html"
@@ -202,10 +177,10 @@
                   "
                 >
                   <h3 class="name" style="font-size: 22px;">
-                    2Problem statement title
+                    Problem statement 2
                   </h3>
                   <h3 class="name">
-                    Company name | <span>16</span> submissions
+                    Company name | <span>17</span> submissions
                   </h3>
                   <p class="description">
                     Aenean tortor est, vulputate quis leo in, vehicula rhoncus
@@ -214,8 +189,7 @@
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-sm-12 item">
+          </div><div id="myDIV" class="col-sm-12 item">
             <div class="row" style="margin-right: 40px;">
               <a
                 href="./Problem.html"
@@ -233,10 +207,10 @@
                   "
                 >
                   <h3 class="name" style="font-size: 22px;">
-                    5Problem statement title
+                    Problem statement 3
                   </h3>
                   <h3 class="name">
-                    Company name | <span>10</span> submissions
+                    Company name | <span>17</span> submissions
                   </h3>
                   <p class="description">
                     Aenean tortor est, vulputate quis leo in, vehicula rhoncus
@@ -245,8 +219,7 @@
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-sm-12 item">
+          </div><div id="myDIV" class="col-sm-12 item">
             <div class="row" style="margin-right: 40px;">
               <a
                 href="./Problem.html"
@@ -264,10 +237,10 @@
                   "
                 >
                   <h3 class="name" style="font-size: 22px;">
-                    Problem statement title
+                    Problem statement 4
                   </h3>
                   <h3 class="name">
-                    Company name | <span>20</span> submissions
+                    Company name | <span>17</span> submissions
                   </h3>
                   <p class="description">
                     Aenean tortor est, vulputate quis leo in, vehicula rhoncus
@@ -276,8 +249,7 @@
                 </div>
               </a>
             </div>
-          </div>
-          <div class="col-sm-12 item">
+          </div><div id="myDIV" class="col-sm-12 item">
             <div class="row" style="margin-right: 40px;">
               <a
                 href="./Problem.html"
@@ -295,10 +267,10 @@
                   "
                 >
                   <h3 class="name" style="font-size: 22px;">
-                    Problem statement title
+                    Problem statement 5
                   </h3>
                   <h3 class="name">
-                    Company name | <span>30</span> submissions
+                    Company name | <span>17</span> submissions
                   </h3>
                   <p class="description">
                     Aenean tortor est, vulputate quis leo in, vehicula rhoncus
@@ -308,10 +280,7 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
+          </div>
     <script>
       function sortList() {
         var list, i, switching, b, shouldSwitch;
@@ -336,8 +305,17 @@
         }
       }
       sortList();
-    </script>
-
+      
+   
+  $(document).ready(function () {
+  $("#anythingSearch").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#main-row *").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
