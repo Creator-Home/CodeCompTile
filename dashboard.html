@@ -1,83 +1,428 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/particles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#datepicker").datepicker({ minDate: -20, maxDate: "+1M +15D" });
+      });
+    </script>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <br />
 
-<body id="page-top">
-    <div id="wrapper">
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <div class="container-fluid">
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-center text-dark mb-0">Dashboard</h3>
+    <div class="container">
+      <h2>Dashboard</h2>
+      <br />
+      <!-- Nav pills -->
+      <ul class="nav nav-pills" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active btn btn-outline-dark m-1"
+            data-toggle="pill"
+            href="#profile"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-outline-dark m-1"
+            data-toggle="pill"
+            href="#contact"
+            >Contact</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-outline-dark m-1"
+            data-toggle="pill"
+            href="#address"
+            >Address</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-outline-dark m-1"
+            data-toggle="pill"
+            href="#links"
+            >Links
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link btn btn-outline-dark m-1"
+            data-toggle="pill"
+            href="#hack"
+            >Hack</a
+          >
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="profile" class="container tab-pane active">
+          <br />
+          <div class="row">
+            <div class="col-lg-10 mb-4">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6 offset-sm-1 offset-md-2">
+                      <h4 class="text-primary font-weight-bold">
+                        Welcome User Name
+                      </h4>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h4 class="text-primary font-weight-bold m-0">User Name</h4>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col">
-                                                <h5>Team Name</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col">
-                                                <h5>Team Member 1</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col">
-                                                <h5>Team Member 2</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col">
-                                                <h5>Registration Number</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col">
-                                                <h5>Hackathon Participated</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="row align-items-center no-gutters">
-                                            <div class="col">
-                                                <h5>Hackathon wins</h5>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="col-sm-10 col-md-2 offset-xs-2 offset-md-2">
+                    <img src="./assets/img/CREATOR_LOGO.png" alt="profile" class="img-fluid">
                     </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                          <button
+                        class="btn btn-outline-dark"
+                        data-toggle="modal"
+                        data-target="#friendModalCenter"
+                        style="margin-bottom: 10px;"
+                      >
+                        Invite Friend
+                      </button>
+                      </div>
+                      <div class="col-md-12">
+                          <button
+                        class="btn btn-outline-dark"
+                        data-toggle="modal"
+                        data-target="#profileModalCenter"
+                      >
+                        Edit Profile
+                      </button>
+                      </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="assets/js/theme.js"></script>
-</body>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Team Name : <span>hyperactives</span></h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Team Member 1</h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Team Member 2</h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Team Member 3</h5>
+                      </div>
+                    </div>
+                  </li>
 
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Registration Number : 1992736</h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Hackathon Participated : <span>3</span></h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Hackathon wins <span>2</span></h5>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="contact" class="container tab-pane fade">
+          <br />
+          <div class="row">
+            <div class="col-lg-10 mb-4">
+              <div class="card shadow mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Email : <span>hyperactives@gmail.com</span></h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Contact no. <span>999111999111</span></h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>any other detail</h5>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="address" class="container tab-pane fade">
+          <br />
+          <div class="row">
+            <div class="col-lg-10 mb-4">
+              <div class="card shadow mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Address Line 1</h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>Address Line 2</h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>any other detail</h5>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="links" class="container tab-pane fade">
+          <br />
+          <div class="row">
+            <div class="col-lg-10 mb-4">
+              <div class="card shadow mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>
+                          <i class="fa fa-facebook"></i>
+                          <span
+                            ><a href="httpe://facebook.com/">Facebook</a>
+                          </span>
+                        </h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>
+                          <i class="fa fa-linkedin"></i>
+                          <span
+                            ><a href="httpe://linkedin.com/">Linkedin</a>
+                          </span>
+                        </h5>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>
+                          <i class="fa fa-github"></i>
+                          <span><a href="httpe://github.com/">Github</a> </span>
+                        </h5>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="hack" class="container tab-pane fade">
+          <br />
+          <div class="row">
+            <div class="col-lg-10 mb-4">
+              <div class="card shadow mb-4">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div class="row align-items-center no-gutters">
+                      <div class="col">
+                        <h5>
+                          Hackathon Details
+                        </h5>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="profileModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="profileModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Edit Your Profile
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+                style="background-color: ghostwhite;"
+                placeholder="Enter Name"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-outline-dark">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal second  -->
+    <div
+      class="modal fade"
+      id="friendModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="friendModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="friendModalCenterTitle">
+              Invite Your Friend
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="friendEmail">Enter your friend's email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="friendEmail1"
+                  placeholder="Email 1"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="friendEmail2"
+                  placeholder="Email 2"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="friendEmail3"
+                  placeholder="Email 3"
+                />
+              </div>
+             
+            
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+            >
+              Invite
+            </button>
+        </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
