@@ -1,67 +1,66 @@
 .col {
-  border-radius: px;
-  border-color: blue;
+	border-radius: px;
+	border-color: blue;
 }
 
 .col {
-  border-radius: 10px;
+	border-radius: 10px;
 }
 
 .img-fluid {
-  max-width: 150px;
+	max-width: 150px;
 }
 
 .card .card-content p {
-  margin: 0;
+	margin: 0;
 }
 @keyframes spin {
-  from {
-    transform: rotateY(0deg);
-    moz-transform: rotateY(0deg);
-    ms-transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    ms-transform: rotateY(360deg);
-  }
+	from {
+		transform: rotateY(0deg);
+		moz-transform: rotateY(0deg);
+		ms-transform: rotateY(0deg);
+	}
+	to {
+		transform: rotateY(360deg);
+		-moz-transform: rotateY(360deg);
+		ms-transform: rotateY(360deg);
+	}
 }
 @-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-  }
+	from {
+		-webkit-transform: rotateY(0deg);
+	}
+	to {
+		-webkit-transform: rotateY(360deg);
+	}
 }
 .imageSpin {
-  animation-name: spin;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  -webkit-animation-name: spin;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 3s;
+	animation-name: spin;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+	-webkit-animation-name: spin;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 3s;
 }
 .disabledBtn {
-  display: none !important;
+	display: none !important;
 }
 .form-control {
-  border-radius: 50px;
-  padding: 15px;
-  background-color: #eff4ff;
-  border: 0px;
+	border-radius: 50px;
+	padding: 15px;
+	background-color: #c5c5c5;
 }
 .form-control:hover {
-  background-color: #ebf0fd;
+	background-color: #dddddd;
 }
 #ul-nav {
-  margin-left: 5px;
-  margin-right: -80px;
+	margin-left: 5px;
+	margin-right: -80px;
 }
 .neu-white {
-  border-radius: 50px;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+	border-radius: 50px;
+	background: linear-gradient(145deg, #ffffff, #e6e6e6);
+	box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
